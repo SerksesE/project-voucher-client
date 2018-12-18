@@ -24,6 +24,7 @@ export default class App extends Component {
     return (
       <div>
         <div className="timer">
+        <h1>Hello</h1>
           {/* <Timer /> */}
         </div>
         <Route exact path="/:uuid" component={CouponActivateContainer} />
