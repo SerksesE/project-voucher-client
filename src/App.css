@@ -1,62 +1,46 @@
-.App {
-  text-align: center;
+.container {
+  width: 226px;
+  height: 436px;
+  position: relative;
+  margin: 0 auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.coupon {
-  display: flex;
-  margin-top: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-  height: auto;
-}
-
-
-.coffee {
-  display: flex;
-  margin-top: -150px; 
-  margin-left: auto;
-  margin-right: auto;
+.logo {
+  position: absolute;
+  top: -20px;
+  right: -50px
 }
 
 .free {
-  margin-top: -420px; 
-  margin-left: 620px;
-  margin-right: auto;
-  font-family: Open Sans;
+  margin: 0;
+  padding-top: 17px;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
-  font-weight: bold;
-  line-height: normal;
+  font-weight: 700;
+  line-height: 1;
   font-size: 54.3487px;
+  text-align: center;
   color: #F69180;
+}
 
+.coffeetext {
+  margin: 0;
+  text-align: center;
+  line-height: 32px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 36.2325px;
+  color: #9B815D;
+}
+
+.enjoytoday {
+  margin: 0;
+  margin-top: 2px;
+  text-align: center;
+  line-height: 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #8C8C8C;
 }
