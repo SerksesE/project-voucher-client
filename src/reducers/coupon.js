@@ -6,7 +6,8 @@ export default (state = null, action) => {
     return action.coupon
     
     case UPDATE_COUPON:
-      return [...state, action.coupon]
+    console.log(action.coupon)
+      return [state, action.coupon]
 
     default:
       return state

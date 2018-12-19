@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  border: 2px solid black;
+  justify-content: center;
+}
+
+.couponSer {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.button-container {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  /* margin: -360px; */
+}
+
+.button {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  width: 260px;
+  padding: 12px 16px;
+  margin-right: 10px;
+}
+
+.toggle {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  /* margin-top: 470px; */
+  /* margin-right: 10px; */
+}
+
+.text {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  margin-top: -580px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.free-text {
+  border: 2px solid black;
+  font-size: 60px;
+  margin-top: -5px;
+}
+
+.coffee-text {
+  border: 2px solid black;
+  margin-top: -50px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.enjoy-text {
+  border: 2px solid black;
+
+}
+

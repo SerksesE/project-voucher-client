@@ -16,8 +16,9 @@ const getCoupon = coupon => ({
   coupon
 })
 
-const updateCouponSuccess = () => ({
-  type: UPDATE_COUPON
+const updateCouponSuccess = coupon => ({
+  type: UPDATE_COUPON,
+  coupon
 })
 
 
@@ -39,10 +40,10 @@ export const fetchCoupon = (couponUuid) => (dispatch) => {
 }
 
 export const updateCoupon = (couponUuid) => (dispatch, getState) => {
-
+  
   request
     .patch(`${baseUrl}/coupons/${couponUuid}`)
     .send({ couponUuid })
-    .then(_ => dispatch(updateCouponSuccess()))
+    .then(result => dispatch(updateCouponSuccess(result.body)), console.log('action'))
     .catch(err => console.error(err))
 }
