@@ -26,6 +26,7 @@ class ValidationContainer extends Component {
   }
 
   render() {
+    console.log(this.props.coupon.forms.barcode)
     return (
       <Validation toggleDisplay={this.toggleDisplay} renderBarcode={this.renderBarcode}/>
     )
