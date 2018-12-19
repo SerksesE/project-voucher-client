@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import CouponActivate from './CouponActivate'
 import Coupon from './Coupon'
 import { fetchCoupon, updateCoupon } from '../actions/coupon'
 import { displayBarcode } from '../actions/display'
