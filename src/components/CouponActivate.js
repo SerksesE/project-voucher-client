@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Popup from './Popup';
+// import Popup from './Popup';
 import ValidationContainer from './ValidationContainer';
 
 export default function CouponActivate(props) {

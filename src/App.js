@@ -6,25 +6,11 @@ import CouponActivateContainer from './components/CouponActivateContainer';
 import { Route } from 'react-router-dom'
 
 export default class App extends Component {
-
-
-  // import Test from './components/test';
-
-
-  // class App extends Component {
-  //   render() {
-  //     return (
-  //       <div className="App">
-  //         <CouponActivateContainer />
-  //       </div>
-
-  //     )}
-
   render() {
     return (
       <div>
         <div className="timer">
-          <h1>Hello World</h1>
+          <h1>Hello World | Redeploy</h1>
           
           {/* <Timer /> */}
         </div>
