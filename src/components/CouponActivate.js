@@ -1,5 +1,6 @@
 import * as React from 'react'
-import Popup from './Popup';
+// import Popup from './Popup';
+import ValidationContainer from './ValidationContainer';
 
 export default function CouponActivate(props) {
   // console.log(props.coupon + 'props')
@@ -16,9 +17,11 @@ export default function CouponActivate(props) {
     <div>
       <img className='coffee' src={props.coupon.forms.location.coffee_image} alt="coffee" width="100px" />
     </div>
+
     <div className='free'>
       <p>Free</p>
     </div>
+
   </div>
   )
 }
