@@ -9,12 +9,11 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <div className="timer">
-          <h1>Hello World | Redeploy!</h1>
-          
-          {/* <Timer /> */}
-        </div>
+          <h1 className='title'>Consumerview</h1>
+   
+       
         <Route exact path="/:uuid" component={CouponActivateContainer} />
+        
       </div>
 
     );
