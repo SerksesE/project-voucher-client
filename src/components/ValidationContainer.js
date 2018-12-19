@@ -9,26 +9,23 @@ class ValidationContainer extends Component {
   }
 
   renderBarcode = () => {
-    if(this.props && this.props.display === true){
-      return (
-      <div>
-        {/* <h1>Are you sure you want to use your barcode?</h1>
-        <button>Yes</button>
-        <button onClick={() => console.log('No')}>No</button> */}
-        <img src={this.props.coupon.forms.barcode} alt='Barcode' width='150px'/>
-      </div>
-      )} 
+    if (this.props && this.props.display === true) {
       return (
         <div>
-          <img src={this.props.coupon.forms.location.coffee_image} alt='Coffee cup' width='150px' />
+          <img src={this.props.coupon.forms.barcode} alt='Barcode' width='150px' />
         </div>
       )
+    }
+    return (
+      <div>
+        <img src={this.props.coupon.forms.location.coffee_image} alt='Coffee cup' width='150px' />
+      </div>
+    )
   }
 
   render() {
-    console.log(this.props.coupon.forms.barcode)
     return (
-      <Validation toggleDisplay={this.toggleDisplay} renderBarcode={this.renderBarcode}/>
+      <Validation toggleDisplay={this.toggleDisplay} renderBarcode={this.renderBarcode} />
     )
   }
 }
