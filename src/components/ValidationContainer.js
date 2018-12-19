@@ -9,7 +9,7 @@ class ValidationContainer extends Component {
   }
 
   renderBarcode = () => {
-    if (this.props && this.props.display === true) {
+    if (this.props.display === true) {
       return (
         <div>
           <img src={this.props.coupon.forms.barcode} alt='Barcode' width='150px' />
