@@ -17,7 +17,12 @@ class ValidationContainer extends Component {
         <button onClick={() => console.log('No')}>No</button> */}
         <img src={this.props.coupon.forms.barcode} alt='Barcode' width='150px'/>
       </div>
-      )}
+      )} 
+      return (
+        <div>
+          <img src={this.props.coupon.forms.location.coffee_image} alt='Coffee cup' width='150px' />
+        </div>
+      )
   }
 
   render() {

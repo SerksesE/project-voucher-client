@@ -1,6 +1,6 @@
 import * as request from 'superagent'
 
-const baseUrl = 'https://consumerview.herokuapp.com'
+// const baseUrl = 'https://consumerview.herokuapp.com'
 
 export const FETCH_COUPONS = 'FETCH_COUPONS'
 export const FETCH_COUPON = 'FETCH_COUPON'
