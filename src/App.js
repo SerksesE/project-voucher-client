@@ -10,7 +10,7 @@ export default class App extends Component {
     return (
       <div>
         <div className="timer">
-          <h1>Hello World | Redeploy</h1>
+          <h1>Hello World | Redeploy!</h1>
           
           {/* <Timer /> */}
         </div>
