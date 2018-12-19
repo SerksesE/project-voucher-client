@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Popup from './Popup';
+// import Popup from './Popup';
 
 export default function CouponActivate(props) {
   // console.log(props.coupon + 'props')
