@@ -19,21 +19,31 @@ export default function CouponActivate(props) {
     backgroundImage: 'url(' + props.coupon.forms.location.coupon_image + ')'
   }
 
+  const freeStyle = {
+    color: props.coupon.forms.location.free_color
+  }
+
+  const coffeeStyle = {
+    color: props.coupon.forms.location.coffee_color
+  }
+
+  const courtesyStyle = {
+    color: props.coupon.forms.location.courtesy_color
+  }
+
   return (
     <div className="container" style={containerStyle}>
       <img className='logo' src={props.coupon.forms.location.logo} alt="logo" width="100px" />
-      <h1 className='free'>FREE</h1>
-      <h2 className='coffeetext'>COFFEE</h2>
-      <h3 className='enjoytoday'>Courtesy of Enjoy Today</h3>
-      
-      <div>
-        <div className='button-container'>
-          <button className='button' style={color} onClick={() => props.toggleDisplay()}>Use</button>
-        </div>
-
-        <div className='toggle'>
-          {props.renderBarcode()}
-        </div>
+      <h1 className='free' style={freeStyle}>FREE</h1>
+      <h2 className='coffeetext' style={coffeeStyle}>COFFEE</h2>
+      <h3 className='enjoytoday' style={courtesyStyle}>Courtesy of Enjoy Today</h3>
+      <div className='button-container'>
+        <button className='button' style={color} onClick={() => props.toggleDisplay()}>Use</button>
+      </div>
+      <h3 className='limited' style={courtesyStyle}>Limited to one-time use</h3>
+      <h3 className='valid' style={courtesyStyle}>Once activated, valid for 30 minutes</h3>
+      <div className='toggle'>
+        {props.renderBarcode()}
       </div>
     </div>
   )
