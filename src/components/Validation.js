@@ -7,7 +7,9 @@ export default function Validation(props) {
       <div>
         <button onClick={() => props.toggleDisplay()}>Use</button>
       </div>
-      {props.renderBarcode()}
+      <div>
+        {props.renderBarcode()}
+      </div>
     </div>
   )
 }
