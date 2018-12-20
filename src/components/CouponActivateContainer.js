@@ -16,8 +16,8 @@ class CouponActivateContainer extends React.Component {
 
   toggleButton = () => {
     const colorTrue = {
-      backgroundColor: 'red',
-      borderColor: 'red',
+      backgroundColor: '#F69180',
+      borderColor: '#F69180',
       color: this.props.coupon.forms.location.button_text_color
     }
     const colorFalse = {
@@ -29,7 +29,7 @@ class CouponActivateContainer extends React.Component {
     if (this.props.display === true) {
       return (
         <div className='button-container'>
-          <button className='button' style={colorTrue} onClick={() => this.toggleDisplay()}>COUPON USED</button>
+          <button className='button' style={colorTrue} onClick={() => this.toggleDisplay()}>COUPON IN USE</button>
         </div>
       )
     }
