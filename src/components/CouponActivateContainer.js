@@ -10,38 +10,66 @@ class CouponActivateContainer extends React.Component {
   }
 
   toggleDisplay = () => {
-    console.log(this.props.match.params.uuid)
     this.props.displayBarcode()
     this.props.updateCoupon(this.props.match.params.uuid)
+  }
+
+  toggleButton = () => {
+    const colorTrue = {
+      backgroundColor: 'red',
+      borderColor: 'red',
+      color: this.props.coupon.forms.location.button_text_color
+    }
+    const colorFalse = {
+      backgroundColor: this.props.coupon.forms.location.button_color,
+      borderColor: this.props.coupon.forms.location.button_color,
+      color: this.props.coupon.forms.location.button_text_color
+    }
+
+    if (this.props.display === true) {
+      return (
+        <div className='button-container'>
+          <button className='button' style={colorTrue} onClick={() => this.toggleDisplay()}>COUPON USED</button>
+        </div>
+      )
+    }
+    return (
+      <div className='button-container'>
+        <button className='button' style={colorFalse} onClick={() => this.toggleDisplay()}>USE COUPON NOW</button>
+      </div>
+    )
   }
 
   renderBarcode = () => {
     if (this.props.display === true) {
       return (
         <div>
-          <img src={this.props.coupon.forms.barcode} alt='Barcode' width='150px' />
+          <img className='barcode' src={this.props.coupon.forms.barcode} alt='Barcode' width='150px' />
         </div>
       )
     }
     return (
       <div>
-        <img src={this.props.coupon.forms.location.coffee_image} alt='Coffee cup' width='150px' />
+        <img className='cup' src={this.props.coupon.forms.location.coffee_image} alt='Coffee cup' width='150px' />
       </div>
     )
   }
 
   render() {
+    console.log(this.props.display)
     return (<Coupon
       updateCoupon={this.updateCoupon}
       coupon={this.props.coupon}
       toggleDisplay={this.toggleDisplay}
       renderBarcode={this.renderBarcode}
+      toggleButton={this.toggleButton}
     />)
   }
 }
 
 const mapStateToProps = state => ({
-  coupon: state.coupon
+  coupon: state.coupon,
+  display: state.display
 })
 
 export default connect(mapStateToProps, { fetchCoupon, updateCoupon, displayBarcode })(CouponActivateContainer)

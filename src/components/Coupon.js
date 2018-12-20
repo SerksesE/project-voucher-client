@@ -33,9 +33,12 @@ export default function CouponActivate(props) {
       <h1 className='free' style={freeStyle}>FREE</h1>
       <h2 className='coffeetext' style={coffeeStyle}>COFFEE</h2>
       <h3 className='enjoytoday' style={courtesyStyle}>Courtesy of Enjoy Today</h3>
-      <div className='button-container'>
+      {props.toggleButton()}
+
+      {/* <div className='button-container'>
         <button className='button' style={color} onClick={() => props.toggleDisplay()}>USE COUPON NOW</button>
-      </div>
+      </div> */}
+      
       <h3 className='limited' style={courtesyStyle}>Limited to one-time use</h3>
       <h3 className='valid' style={courtesyStyle}>Once activated, valid for 30 minutes</h3>
       <div className='toggle'>
