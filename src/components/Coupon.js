@@ -4,15 +4,11 @@ import './Coupon.css'
 export default function CouponActivate(props) {
   
   if (props.coupon === null) return <h1>Loading your coupon...</h1>
-
-  console.log(props.coupon)
-  console.log(props.coupon.forms)
-  console.log(props.coupon.forms.location)
-  console.log(props.coupon.forms.location.button_color)
   
   const color = {
-    backgroundColor: props.coupon && props.coupon.forms.location.button_color,
-    borderColor: props.coupon && props.coupon.forms.location.button_color,
+    backgroundColor: props.coupon.forms.location.button_color,
+    borderColor: props.coupon.forms.location.button_color,
+    color: props.coupon.forms.location.button_text_color
   }
 
   const containerStyle = {
@@ -38,7 +34,7 @@ export default function CouponActivate(props) {
       <h2 className='coffeetext' style={coffeeStyle}>COFFEE</h2>
       <h3 className='enjoytoday' style={courtesyStyle}>Courtesy of Enjoy Today</h3>
       <div className='button-container'>
-        <button className='button' style={color} onClick={() => props.toggleDisplay()}>Use</button>
+        <button className='button' style={color} onClick={() => props.toggleDisplay()}>USE COUPON NOW</button>
       </div>
       <h3 className='limited' style={courtesyStyle}>Limited to one-time use</h3>
       <h3 className='valid' style={courtesyStyle}>Once activated, valid for 30 minutes</h3>

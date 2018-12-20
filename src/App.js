@@ -8,14 +8,9 @@ import { Route } from 'react-router-dom'
 export default class App extends Component {
   render() {
     return (
-      <div>
-          <h1 className='title'>Consumerview</h1>
-   
-       
+      <div className='topbar'>
         <Route exact path="/:uuid" component={CouponActivateContainer} />
-        
       </div>
-
     );
   }
 }
