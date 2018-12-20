@@ -44,13 +44,13 @@ class CouponActivateContainer extends React.Component {
     if (this.props.display === true) {
       return (
         <div>
-          <img className='barcode' src={this.props.coupon.forms.barcode} alt='Barcode' width='150px' />
+          <img className='barcode' src={this.props.coupon.forms.barcode} alt='Barcode' width='167px' />
         </div>
       )
     }
     return (
       <div>
-        <img className='cup' src={this.props.coupon.forms.location.coffee_image} alt='Coffee cup' width='150px' />
+        <img className='cup' src={this.props.coupon.forms.location.coffee_image} alt='Coffee cup' width='131px' />
       </div>
     )
   }

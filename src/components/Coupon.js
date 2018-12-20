@@ -2,9 +2,9 @@ import * as React from 'react'
 import './Coupon.css'
 
 export default function CouponActivate(props) {
-  
+
   if (props.coupon === null) return <h1>Loading your coupon...</h1>
-  
+
   // const color = {
   //   backgroundColor: props.coupon.forms.location.button_color,
   //   borderColor: props.coupon.forms.location.button_color,
@@ -34,11 +34,6 @@ export default function CouponActivate(props) {
       <h2 className='coffeetext' style={coffeeStyle}>COFFEE</h2>
       <h3 className='enjoytoday' style={courtesyStyle}><i>Courtesy of Enjoy Today</i></h3>
       {props.toggleButton()}
-
-      {/* <div className='button-container'>
-        <button className='button' style={color} onClick={() => props.toggleDisplay()}>USE COUPON NOW</button>
-      </div> */}
-
       <h3 className='limited' style={courtesyStyle}>Limited to one-time use</h3>
       <h3 className='valid' style={courtesyStyle}>Once activated, valid for 30 minutes</h3>
       <div className='toggle'>
