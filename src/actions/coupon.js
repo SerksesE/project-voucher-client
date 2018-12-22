@@ -39,7 +39,7 @@ export const fetchCoupon = (couponUuid) => (dispatch) => {
     .catch(err => console.error(err))
 }
 
-export const updateCoupon = (couponUuid) => (dispatch, getState) => {
+export const updateCoupon = (couponUuid) => (dispatch) => {
   
   request
     .patch(`${baseUrl}/coupons/${couponUuid}`)
