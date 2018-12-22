@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
 import CouponActivateContainer from './components/CouponActivateContainer';
-//import Timer from './components/Timer'
-// import Popup from './components/Popup';
 import { Route } from 'react-router-dom'
 
 export default class App extends Component {

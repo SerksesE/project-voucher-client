@@ -44,6 +44,6 @@ export const updateCoupon = (couponUuid) => (dispatch) => {
   request
     .patch(`${baseUrl}/coupons/${couponUuid}`)
     .send({ couponUuid })
-    .then(result => dispatch(updateCouponSuccess(result.body)), console.log('action'))
+    .then(result => dispatch(updateCouponSuccess(result.body)))
     .catch(err => console.error(err))
 }

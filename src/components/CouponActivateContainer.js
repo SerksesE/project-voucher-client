@@ -71,7 +71,6 @@ class CouponActivateContainer extends React.Component {
 
   render() {
     return (<Coupon
-      updateCoupon={this.updateCoupon}
       coupon={this.props.coupon}
       toggleDisplay={this.toggleDisplay}
       renderBarcode={this.renderBarcode}
