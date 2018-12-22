@@ -60,6 +60,17 @@
   font-weight: bold;
 }
 
+.button-validation {
+  margin-top: 18px;
+  border-radius: 9.06px;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  padding: 12px 16px;
+  margin-right: 7.2px;
+  font-weight: bold;
+}
+
 .toggle {
   text-align: center;
   margin-top: 36px;
@@ -89,7 +100,7 @@
 }
 
 .topbar {
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
 .barcode {

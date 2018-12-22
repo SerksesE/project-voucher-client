@@ -2,7 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Coupon from './Coupon'
 import { fetchCoupon, updateCoupon } from '../actions/coupon'
-import { displayBarcode } from '../actions/display'
+import { barcodeDisplay } from '../actions/displayBarcode'
+import { validationDisplay } from '../actions/displayValidation'
 
 class CouponActivateContainer extends React.Component {
   componentDidMount() {
@@ -10,11 +11,16 @@ class CouponActivateContainer extends React.Component {
   }
 
   toggleDisplay = () => {
-    this.props.displayBarcode()
+    this.props.barcodeDisplay()
+  }
+
+  toggleValidation = () => {
+    this.props.validationDisplay()
+    this.props.barcodeDisplay()
     this.props.updateCoupon(this.props.match.params.uuid)
   }
 
-  toggleButton = () => {
+  renderValidation = () => {
     const colorTrue = {
       backgroundColor: '#F69180',
       borderColor: '#F69180',
@@ -29,6 +35,14 @@ class CouponActivateContainer extends React.Component {
     if (this.props.display === true) {
       return (
         <div className='button-container'>
+          <button style={colorFalse} onClick={() => this.toggleValidation()} className='button-validation'>USE NOW</button>
+          <button style={colorFalse} onClick={() => this.toggleDisplay()} className='button-validation'>LATER</button>
+        </div>
+      )
+    }
+    if (this.props.validation === true) {
+      return (
+        <div className='button-container'>
           <button className='button' style={colorTrue}>COUPON IN USE</button>
         </div>
       )
@@ -41,7 +55,7 @@ class CouponActivateContainer extends React.Component {
   }
 
   renderBarcode = () => {
-    if (this.props.display === true) {
+    if (this.props.validation === true) {
       return (
         <div>
           <img className='barcode' src={this.props.coupon.forms.barcode} alt='Barcode' width='167px' />
@@ -57,19 +71,21 @@ class CouponActivateContainer extends React.Component {
 
   render() {
     console.log(this.props.display)
+    console.log(this.props.validation)
     return (<Coupon
       updateCoupon={this.updateCoupon}
       coupon={this.props.coupon}
       toggleDisplay={this.toggleDisplay}
       renderBarcode={this.renderBarcode}
-      toggleButton={this.toggleButton}
+      renderValidation={this.renderValidation}
     />)
   }
 }
 
 const mapStateToProps = state => ({
   coupon: state.coupon,
-  display: state.display
+  display: state.displayBarcode,
+  validation: state.displayValidation
 })
 
-export default connect(mapStateToProps, { fetchCoupon, updateCoupon, displayBarcode })(CouponActivateContainer)
+export default connect(mapStateToProps, { fetchCoupon, updateCoupon, barcodeDisplay, validationDisplay })(CouponActivateContainer)

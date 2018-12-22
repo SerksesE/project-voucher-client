@@ -5,12 +5,6 @@ export default function CouponActivate(props) {
 
   if (props.coupon === null) return <h1>Loading your coupon...</h1>
 
-  // const color = {
-  //   backgroundColor: props.coupon.forms.location.button_color,
-  //   borderColor: props.coupon.forms.location.button_color,
-  //   color: props.coupon.forms.location.button_text_color
-  // }
-
   const containerStyle = {
     backgroundImage: 'url(' + props.coupon.forms.location.coupon_image + ')'
   }
@@ -33,7 +27,7 @@ export default function CouponActivate(props) {
       <h1 className='free' style={freeStyle}>FREE</h1>
       <h2 className='coffeetext' style={coffeeStyle}>COFFEE</h2>
       <h3 className='enjoytoday' style={courtesyStyle}><i>Courtesy of Enjoy Today</i></h3>
-      {props.toggleButton()}
+      {props.renderValidation()}
       <h3 className='limited' style={courtesyStyle}>Limited to one-time use</h3>
       <h3 className='valid' style={courtesyStyle}>Once activated, valid for 30 minutes</h3>
       <div className='toggle'>
