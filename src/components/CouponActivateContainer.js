@@ -20,6 +20,12 @@ class CouponActivateContainer extends React.Component {
     this.props.updateCoupon(this.props.match.params.uuid)
   }
 
+  renderUsed = () => {
+    if (this.props.coupon.used_at !== null) {
+      return this.props.displayValidation === true && this.props.displayBarcode === false
+    }
+  }
+
   renderValidation = () => {
     const colorTrue = {
       backgroundColor: '#F69180',
@@ -40,7 +46,7 @@ class CouponActivateContainer extends React.Component {
         </div>
       )
     }
-    if (this.props.validation === true) {
+    if (this.props.validation === true || this.props.coupon.used_at !== null) {
       return (
         <div className='button-container'>
           <button className='button' style={colorTrue}>COUPON IN USE</button>
@@ -55,7 +61,7 @@ class CouponActivateContainer extends React.Component {
   }
 
   renderBarcode = () => {
-    if (this.props.validation === true) {
+    if (this.props.validation === true || this.props.coupon.used_at !== null) {
       return (
         <div>
           <img className='barcode' src={this.props.coupon.forms.barcode} alt='Barcode' width='167px' />
@@ -70,8 +76,6 @@ class CouponActivateContainer extends React.Component {
   }
 
   render() {
-    console.log(this.props.display)
-    console.log(this.props.validation)
     return (<Coupon
       updateCoupon={this.updateCoupon}
       coupon={this.props.coupon}
