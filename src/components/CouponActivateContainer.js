@@ -20,12 +20,6 @@ class CouponActivateContainer extends React.Component {
     this.props.updateCoupon(this.props.match.params.uuid)
   }
 
-  renderUsed = () => {
-    if (this.props.coupon.used_at !== null) {
-      return this.props.displayValidation === true && this.props.displayBarcode === false
-    }
-  }
-
   renderValidation = () => {
     const colorTrue = {
       backgroundColor: '#F69180',
