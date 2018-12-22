@@ -1,3 +1,6 @@
+This React-app contains a coupon that can be claimed after a typeform is filled out. <br>
+Ones claimed the coupon will expire within 30 minutes or if the coupon isn't claimed within 15 days of creation.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
